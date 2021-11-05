@@ -1,10 +1,23 @@
 import './App.css';
-
+import React from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Navbar from './Layouts/Navbar';
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <h2>You can edit this</h2>
+      
+        <Navbar/>
+      <Router>
+        
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/login">Login</Link>
+
+       
+      </Router>
+
+      
     </div>
   );
 }
