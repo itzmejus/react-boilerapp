@@ -1,25 +1,15 @@
 import React, { useState } from 'react'
+import Home from '../Layouts/Home';
 
-function Counter() {
-    let [count, setCount] = useState(0);
-    const increment = () => {
-        setCount(count + 1)
-    }
-    const decrement = () => {
-        setCount(count - 1)
-    }
-    const reset = () => {
-        setCount(count = 0)
-    }
+function Display() {
+    const [state, setState] = useState(false)
     return (
         <div>
-            <h1>Counter</h1>
-            <button onClick={increment}>Increase</button>
-            <button onClick={reset}>Reset</button>
-            <button onClick={decrement}>Decrement</button>
-
-            <h1>Counter: {count}</h1>
+            <h1 onClick={() => setState(!state)}>Click here</h1>
+            {state ?
+                <Home />
+                : null}
         </div>
     )
 }
-export default Counter
+export default Display

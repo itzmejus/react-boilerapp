@@ -1,8 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 function Home() {
     return (
         <div>
-            This is the Home Page
+            <h1 >This is the Home Page</h1>
         </div>
     )
 }
